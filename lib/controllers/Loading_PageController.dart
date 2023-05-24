@@ -71,11 +71,11 @@ class LoadingController extends GetxController
   void reloadPage() {
     percent.value = 0;
     containersize = Screensize*0.5;
+    animationDuration = 500;
     incrementer();
     weathersData.clear();
     showtable();
     fetchWeather();
-    animationDuration = 500;
     displayMessage();
   }
 

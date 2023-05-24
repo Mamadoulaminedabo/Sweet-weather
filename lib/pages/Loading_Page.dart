@@ -155,7 +155,7 @@ class LoadingView extends StatelessWidget {
                                     const SizedBox(height: 20),
                                     const Center(
                                       child: Text(
-                                        'Cliquez sur le Soleil pour rafraîchir',
+                                        'Cliquez sur le Soleil pour recommencer',
                                         style: TextStyle(
                                           fontSize: 15,
                                           fontWeight: FontWeight.bold,
@@ -176,16 +176,6 @@ class LoadingView extends StatelessWidget {
                           visible: controller.percent.value >= 100,
                           child: Column(
                             children: [
-                              // SizedBox(
-                              //   height: MediaQuery.of(context).size.height,
-                              //   child: ParallaxRain(
-                              //     key: controller.parallaxOne,
-                              //     dropColors: const [
-                              //       Colors.white,
-                              //     ],
-                              //     trail: true,
-                              //   ),
-                              // ),
                               DataTable(
                                 columnSpacing: 20,
                                 columns: const <DataColumn>[
@@ -232,7 +222,10 @@ class LoadingView extends StatelessWidget {
                                   ),
                                 ],
                                 rows: List<DataRow>.generate(
-                                  controller.weathersData.length,
+                                  // check if the list is empty
+                                  controller.weathersData.isEmpty
+                                      ? 0
+                                      : controller.weathersData.length,
                                       (index) {
                                     final currentWeather = controller.weathersData[index];
                                     return DataRow(
@@ -265,13 +258,10 @@ class LoadingView extends StatelessWidget {
                                                 .primary
                                                 .withOpacity(0.08);
                                           }
-                                          if (currentWeather.temp > 20) {
-                                            return Colors.orange.withOpacity(0.7);
-                                          } else if (currentWeather.temp < 10) {
-                                            return Colors.greenAccent.withOpacity(0.7);
-                                          } else {
-                                            return Colors.blue.withOpacity(0.4);
+                                          if (index.isEven) {
+                                            return Colors.grey.withOpacity(0.3);
                                           }
+                                          return null; // Use default value for other states and odd rows.
                                         },
                                       ),
                                     );
