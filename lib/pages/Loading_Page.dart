@@ -77,7 +77,6 @@ class LoadingView extends StatelessWidget {
                                       radius: 130,
                                       lineWidth: 20,
                                       percent: 1,
-                                      // progressColor: controller.backgroundColor,
                                       backgroundColor: controller.shadowColor,
                                       arcType: ArcType.FULL,
                                       arcBackgroundColor: const Color.fromARGB(

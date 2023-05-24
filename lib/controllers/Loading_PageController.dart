@@ -1,3 +1,5 @@
+// ignore_for_file: non_constant_identifier_names
+
 import 'dart:async';
 // ignore_for_file: file_names
 import 'package:dio/dio.dart';
