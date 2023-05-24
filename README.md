@@ -4,6 +4,11 @@ Ce projet est une application Flutter qui affiche la météo de 5 villes différ
 Le premier qui affiche un bouton avec une animation qui nous permet d'aller sur une seconde page qui contient une jauge de progression en pourcentage en demi-cercle 
 avec une animation pour faire patienter l'utilisateur et affiche les résultats sous forme de tableau.
 
+## Captures d'écran
+
+![Écran d'accueil](Screenshots/home.jpg)
+![Écran de chargement](Screenshots/loading.jpg)
+![Écran de chargement](Screenshots/result.jpg)
 
 
 ## Fonctionnalités
