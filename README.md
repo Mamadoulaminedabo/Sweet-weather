@@ -6,6 +6,7 @@ avec une animation pour faire patienter l'utilisateur et affiche les résultats 
 
 ## Captures d'écran
 
+![icon](Screenshots/weather.png)
 ![Écran d'accueil](Screenshots/home.jpg)
 ![Écran de chargement](Screenshots/loading.jpg)
 ![Écran de chargement](Screenshots/result.jpg)
