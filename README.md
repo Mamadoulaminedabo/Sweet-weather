@@ -45,7 +45,7 @@ Pour utiliser l'API OpenWeatherMap, vous devez obtenir une clé API. Inscrivez-v
 
 
 ```dart
-String apiKey = "daf7f8250d4f11f19738163cb04d1337";
+String apiKey = "votre clé API";
 ```
 ##
 Ce projet m'a permit de découvrir des outils tels que getx ou retrofit qui facilite vraiment la vie.
