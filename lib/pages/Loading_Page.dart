@@ -1,8 +1,8 @@
 // ignore_for_file: file_names
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:lottie/lottie.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
-import 'package:rive/rive.dart';
 import '../controllers/Loading_PageController.dart';
 
 class LoadingView extends StatelessWidget {
@@ -74,12 +74,14 @@ class LoadingView extends StatelessWidget {
                                       CircularPercentIndicator(
                                       animation: true,
                                       animationDuration: 60000,
-                                      radius: 250,
+                                      radius: 130,
                                       lineWidth: 20,
                                       percent: 1,
                                       // progressColor: controller.backgroundColor,
                                       backgroundColor: controller.shadowColor,
                                       arcType: ArcType.FULL,
+                                      arcBackgroundColor: const Color.fromARGB(
+                                          98, 253, 212, 1),
                                       circularStrokeCap: CircularStrokeCap.round,
                                       linearGradient: const LinearGradient(
                                         begin: Alignment.bottomLeft,
@@ -90,14 +92,27 @@ class LoadingView extends StatelessWidget {
                                           Color.fromARGB(255, 252, 139, 0)
                                         ],
                                       ),
-                                      center: Text(
-                                        '${controller.percent.value}%',
-                                        style: const TextStyle(
-                                          fontSize: 40,
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.white,
-                                        ),
-                                      ),
+                                      center: Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          const SizedBox(height: 70),
+                                          Text(
+                                            '${controller.percent.value}%',
+                                            style: const TextStyle(
+                                              fontSize: 40,
+                                              fontWeight: FontWeight.bold,
+                                              color: Colors.white,
+                                            ),
+                                          ),
+                                          Lottie.asset(
+                                            'assets/lottie/waiting.json',
+                                            width: 140,
+                                            height: 140,
+                                            fit: BoxFit.fill,
+                                          ),
+                                        ],
+                                      )
                                     ),
                                     const SizedBox(height: 60),
                                     Center(
@@ -146,7 +161,7 @@ class LoadingView extends StatelessWidget {
                                               ),
                                             ],
                                           ),
-                                          child: const RiveAnimation.asset('assets/rive/sun.riv'),
+                                          child: Lottie.asset('assets/lottie/sun.json'),
                                         );
                                       },
                                     ),

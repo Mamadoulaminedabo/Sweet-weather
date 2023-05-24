@@ -45,7 +45,7 @@ class LoadingController extends GetxController
     showtable();
     fetchWeather();
     Screensize = Get.height;
-    containersize = Screensize*0.5;
+    containersize = Screensize*0.6;
     animationDuration = 2000;
   }
 
@@ -70,7 +70,7 @@ class LoadingController extends GetxController
 
   void reloadPage() {
     percent.value = 0;
-    containersize = Screensize*0.5;
+    containersize = Screensize*0.6;
     animationDuration = 500;
     incrementer();
     weathersData.clear();

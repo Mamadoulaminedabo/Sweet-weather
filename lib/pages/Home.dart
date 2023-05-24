@@ -1,9 +1,8 @@
 // ignore_for_file: file_names
-
 import 'package:flutter/material.dart';
-// import 'package:flutter/painting.dart'; // Importation pour LinearGradient
 import 'package:get/get.dart';
-import 'package:rive/rive.dart';
+import 'package:lottie/lottie.dart';
+// import 'package:rive/rive.dart';
 import 'package:sweet_weather/pages/rain.dart';
 import 'dart:async';
 
@@ -34,16 +33,6 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
     _animationController.repeat(reverse: true);
     _animation = Tween(begin: 5.0, end: 19.0).animate(_animationController);
 
-    // _timer = Timer.periodic(const Duration(seconds: 2), (timer) {
-    //   setState(() {
-    //     _shadowColor = Color.fromARGB(
-    //       255,
-    //       Random().nextInt(100),
-    //       135,
-    //       248,
-    //     );
-    //   });
-    // });
   }
 
   @override
@@ -112,8 +101,11 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                         ),
                         child: Stack(
                           alignment: Alignment.center,
-                          children: const [
-                            RiveAnimation.asset('assets/rive/cloud.riv'),
+                          children: [
+                            Lottie.asset('assets/lottie/weather.json',
+                              width: 140,
+                              height: 140,
+                              fit: BoxFit.fill,),
                           ],
                         ),
                       );
